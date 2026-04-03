@@ -74,8 +74,8 @@ Includes: Attention Is All You Need, BERT, RAG, LoRA, Chain-of-Thought, LLaMA, C
 
 ## Official Databricks Resources
 
-- [Generative AI Engineer Associate Exam Page](https://www.databricks.com/learn/certification/generative-ai-engineer-associate)
-- [Databricks GenAI Documentation](https://docs.databricks.com/en/generative-ai/index.html)
+- [Generative AI Engineer Associate Exam Page](https://credentials.databricks.com/credentials/generative-ai-engineer-associate)
+- [Databricks GenAI Documentation](https://docs.databricks.com/aws/en/generative-ai/retrieval-augmented-generation)
 - [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
 - [LangChain + Databricks](https://python.langchain.com/docs/integrations/providers/databricks/)
 
