@@ -1,15 +1,7 @@
 flowchart LR
-    VS[(VS Index\narxiv_chunks_index)]
-    RT[Retrieval Tool\nsearch_arxiv_papers]
-    AG[LangChain Agent\nAgentExecutor]
-    LLM[ChatDatabricks\nLlama-3.3-70B]
-    SP[System Prompt\narXiv Research Assistant]
-    ML[MLflow Log\nartifact_path=agent]
-    UC[UC Registry\nCATALOG.SCHEMA.arxiv_research_agent]
-
-    VS -->|similarity_search| RT
-    RT -->|retrieved context| AG
-    SP -->|grounds behaviour| AG
-    LLM -->|generates response| AG
-    AG -->|log_model| ML
-    ML -->|register_model| UC
+    IDX[("VS Index")] --> RT["Retrieval Tool<br/>similarity_search"]
+    RT --> AGT["LangChain Agent<br/>AgentExecutor"]
+    LLM["ChatDatabricks<br/>Llama 3.3 70B"] --> AGT
+    PROMPT["System Prompt<br/>arXiv Assistant"] --> AGT
+    AGT --> LOG["MLflow<br/>log_model"]
+    LOG --> REG["UC Registry<br/>register_model"]

@@ -1,21 +1,9 @@
-flowchart TD
-    DS["Evaluation Dataset\n(question + expected_response)"]
-    AG["Agent / Model\n(model_uri from Unity Catalog)"]
-    RS["Agent Responses"]
-
-    BM["Built-in Metrics\n(relevance, groundedness,\ntoxicity, latency)"]
-    LJ["LLM Judge\n(make_genai_metric — custom rubric)"]
-    AE["Mosaic AI Agent Evaluation\n(chunk_relevance, groundedness,\nsafety, relevance)"]
-
-    CD["Comparison Dashboard\n(MLflow Experiment UI)"]
-    AL["Model Alias Update\n(@Champion / @Challenger)"]
-
-    DS --> AG
-    AG --> RS
-    RS --> BM
-    RS --> LJ
-    RS --> AE
-    BM --> CD
-    LJ --> CD
-    AE --> CD
-    CD --> AL
+flowchart LR
+    DS[("Eval Dataset<br/>question +<br/>expected answer")] --> AGT["Agent"]
+    AGT --> RESP["Responses"]
+    RESP --> BI["Built-in Metrics<br/>relevance /<br/>groundedness"]
+    RESP --> JUDGE["LLM-as-Judge<br/>Custom Rubric"]
+    RESP --> MAI["Agent Eval<br/>Mosaic AI"]
+    BI --> CMP["Compare<br/>Versions"]
+    JUDGE --> CMP
+    MAI --> CMP
