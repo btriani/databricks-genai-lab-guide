@@ -47,7 +47,9 @@ See [COST-GUIDE.md](COST-GUIDE.md) for per-service pricing and how to minimize s
 
 ## Architecture Overview
 
-![Architecture Overview](assets/diagrams/architecture-overview.png)
+<a href="assets/diagrams/architecture-overview.png">
+  <img src="assets/diagrams/architecture-overview.png" alt="Architecture Overview" width="100%">
+</a>
 
 ## Each Lab Contains
 
